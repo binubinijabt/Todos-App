@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<div class="container">
+
+    <div class="row mt-4">
+        <h2 class="text-center my-4" style="color: white;"><i class="fa-regular fa-eye me-3 text-info"></i>  View todos</h2>
+
+        <p class="p-2" style="text-align: justify;color: white; font-size: 25px;">These features are typically backed up by in-depth analytics and reporting
+            features, providing you full visibility into how is you
+            performing. </p>
+
+    </div>
+
+<!-- <pre> {{todo|json}}</pre> -->
+
+    <div class="row" style="background-color: blue;">
+
+        <div class="col-8 mt-2 ">
+
+
+            <ul class="list-group">
+                <li style="font-weight: 700;" class="list-group-item">Name:{{todo.name}}</li>
+                <li style="font-weight: 700;" class="list-group-item">Id:{{todo.id}}</li>
+                <li style="font-weight: 700;" class="list-group-item">title:{{todo.title}}</li>
+                <li style="font-weight: 700;" class="list-group-item">date:{{todo.date}}</li>
+                <li style="font-weight: 700;" class="list-group-item">completed:{{todo.completed}}</li>
+
+              </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+<!-- image -->
+
+        <div class="col-4 mt-2">
+            <img [src]= "todo.photo" width="200px" height="200px" alt="">
+
+        </div>
+
+    </div>
+
+<a routerLink="/" value="Go Back" class="btn btn-primary m-3"> <i class="fa-solid fa-chevron-left text-light"> </i> </a>
+
+</div>
+
+</body>
+</html>

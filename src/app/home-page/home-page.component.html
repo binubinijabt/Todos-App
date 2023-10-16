@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+    <div class="container">
+        <div class="row" style="background-image: url(https://i.kym-cdn.com/photos/images/newsfeed/001/343/838/66d.gif);background-repeat: no-repeat;background-size:cover;background-position: 100%;">
+            <div class="col-1"></div>
+            <div class="col-10 m-4 p-2">
+                <h1 style="color: white;text-align: justify; ">
+                    ORGANISE YOUR WORK LIFE AND PERSONAL LIFE WITH TODOS
+                    <br><br><br><br>
+                
+                </h1>
+
+
+                <a routerLink="/home-page/add" class="btn"
+                    style="background-color: blue;border-radius: 20px;color: white;position: absolute;right: 9%;">Add
+                    Your Todos &nbsp;&nbsp;<i class="fa-solid fa-circle-plus"></i></a>
+<br><br>
+
+
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+
+<br>
+
+<div class="row">
+
+    <div class="col-6">
+        <input  (keyup)="search($event)" id="inpt"  type="text" placeholder="Search Your Contact" class="form-control">
+
+    </div>
+    <div class="col-6">
+
+        <button id="btn" class="btn btn-primary">Search</button>
+
+    </div>
+
+</div> 
+<br>
+
+
+        <div class="row">
+            <div class="col-2 ">
+
+            </div>
+<br><br>
+
+<!-- 
+<pre>
+    {{allTodos|json}}
+</pre> -->
+
+            <div class="col-8 m-4" *ngFor= "let todo of allTodos | filter:searchKey:'name'">
+
+
+                <div class="card" style="background-color: blue;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{{todo.photo}}" width="200px" height="200px" alt="">
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-group">
+                                    <li  class="list-group-item" style="color: rgb(8, 5, 5);font-weight: 700;">Name :{{todo.name}}
+
+                                        <a routerLink="/home-page/view/{{todo.id}}" style="float: right;"> <i
+                                                class="fa-solid fa-eye text-success"></i></a>
+
+                                    </li>
+                                    <li style="font-weight: 700;" class="list-group-item"> id: {{todo.id}}
+
+                                        <a routerLink="/home-page/update/{{todo.id}}" style="float: right;"> <i
+                                                class="fa-sharp fa-solid fa-user-pen text-primary"></i> </a>
+
+                                    </li>
+                                    <li style="font-weight: 700;" class="list-group-item"> Title: {{todo.title}}
+
+                                        <a (click)="deleteTodos(todo.id)" style="float: right;"> <i
+                                                class="fa-solid fa-trash text-danger"></i> </a>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
